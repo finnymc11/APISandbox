@@ -1,16 +1,19 @@
 module.exports = async function (context, req) {
-  context.log("HTTPHello function processed a request.");
+    // Optional: log something to Application Insights
+    context.log('Health check function processed a request.');
 
-  const name =
-    (req.query && req.query.name) ||
-    (req.body && req.body.name);
+    const responseBody = {
+        status: "ok",
+        app: "finbar-app",
+        region: "eastus2",
+        timestamp: new Date().toISOString()
+    };
 
-  const message = name
-    ? `Hello, ${name}. This HTTP triggered function executed successfully.`
-    : "This HTTP triggered function executed successfully. Pass a name in the query string or in the request body for a personalized response.";
-
-  context.res = {
-    status: 200,
-    body: message
-  };
+    context.res = {
+        status: 200,
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: responseBody
+    };
 };
