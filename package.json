@@ -6,5 +6,7 @@
   "scripts": {
     "build": "echo \"No build step\""
   },
-  "dependencies": {}
+  "dependencies": {
+    "@azure/functions": "^4.0.0"
+  }
 }
