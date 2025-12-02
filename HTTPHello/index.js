@@ -1,7 +1,9 @@
 module.exports = async function (context, req) {
   context.log("HTTPHello function processed a request.");
 
-  const name = req.query.name || (req.body && req.body.name);
+  const name =
+    (req.query && req.query.name) ||
+    (req.body && req.body.name);
 
   const message = name
     ? `Hello, ${name}. This HTTP triggered function executed successfully.`
