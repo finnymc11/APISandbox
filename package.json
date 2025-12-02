@@ -1,0 +1,13 @@
+{
+  "name": "finbar-app",
+  "version": "1.0.0",
+  "description": "Azure Functions app for finbar-app (Node 22, v4 model)",
+  "main": "functions.js",
+  "scripts": {
+    "start": "func start",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "dependencies": {
+    "@azure/functions": "^4.0.0"
+  }
+}
