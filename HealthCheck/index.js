@@ -1,11 +1,11 @@
 module.exports = async function (context, req) {
-    // Optional: log something to Application Insights
-    context.log('Health check function processed a request.');
+    context.log('HealthCheck function invoked.');
 
     const responseBody = {
         status: "ok",
         app: "finbar-app",
         region: "eastus2",
+        message: "Hello from Azure Functions + GitHub!",
         timestamp: new Date().toISOString()
     };
 

@@ -1,0 +1,4 @@
+node_modules/
+.localsettings.json
+npm-debug.log
+dist/

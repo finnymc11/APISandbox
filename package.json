@@ -1,10 +1,13 @@
 {
-  "name": "apisandbox",
+  "name": "finbar-app",
   "version": "1.0.0",
-  "description": "Azure Functions Node.js app",
+  "description": "Azure Functions app for finbar-app (Node 22)",
   "main": "index.js",
   "scripts": {
-    "build": "echo \"No build step\""
+    "start": "func start",
+    "test": "echo \"No tests specified\" && exit 0"
   },
+  "author": "Finbar",
+  "license": "MIT",
   "dependencies": {}
 }
